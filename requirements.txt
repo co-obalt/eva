@@ -1,0 +1,16 @@
+# EVA v2 runtime dependencies (all were already present on this machine).
+# Core principle (doc 12 §5): Phase-1 core runs on stdlib + pydantic ONLY.
+pydantic>=2.13
+aiohttp>=3.9
+psutil>=5.9
+requests>=2.31
+rich>=13.0
+
+# Tests
+pytest>=8.0
+
+# Optional (voice / presence / vision) — lazily imported; EVA degrades honestly
+# without them. Uncomment/install only if you want the capability:
+# edge-tts>=7         # neural voice output (en-US-AnaNeural / ur-PK-UzmaNeural)
+# pillow>=10          # L6 screenshot evidence artifacts
+# playwright>=1.40    # reserved for the Layer-B browser escalation (unused by default)
